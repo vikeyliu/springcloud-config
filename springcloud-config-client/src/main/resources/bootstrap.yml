@@ -1,0 +1,20 @@
+server:
+  port: 9006
+spring:
+  application:
+    name: springcloud-config
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: springcloud-config-server
+      profile: dev
+
+
+eureka:
+#  instance:
+#    lease-renewal-interval-in-seconds: 10
+#    lease-expiration-duration-in-seconds: 30
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8100/eureka/

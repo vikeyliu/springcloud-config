@@ -1,0 +1,50 @@
+server:
+  port: 8005
+eureka:
+  instance:
+    hostname: localhost
+  server:
+    enable-self-preservation: false
+    waitTimeInMsWhenSyncEmpty: 0
+    #evictionIntervalTimerInMs: 4000
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#spring:
+#  jmx:
+#    default-domain: eureka-server
+#  application:
+#    name: eurka-server
+#  mail:
+#    host: smtp.qq.com
+#    username: 346144996@qq.com
+#    password: rxkwgrhkdtnxbijc
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true #安全认证(默认是true)
+#          port: 465
+#          ssl:
+#            enable: true #开启ssl加密 否则项目启动时报530error
+#            socketFactory: sf
+#          starttls:
+#            enable: true
+#            required: true
+#      mail.debug: true
+#      mail.smtp.auth: true #安全认证(默认是true)
+#      mail.smtp.port: 465
+#      mail.smtp.ssl.enable: true #开启ssl加密 否则项目启动时报530error
+#      mail.smtp.ssl.socketFactory: sf
+#      mail.smtp.starttls.enable: true
+#      mail.smtp.starttls.required: true
+
+
+
+#-------------------------------------------------------------------------------------------------------------------------
+#配置邮件
+#notify:
+#  mail:
+#    from: 346144996@qq.com
+#    to: 1281422503@qq.com   #多个接收者用 英文输入法下的; 号隔开
